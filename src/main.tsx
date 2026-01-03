@@ -3,13 +3,18 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 import { ModalProvider } from './components/context/ModalContext.tsx'
+import ErrorBoundary from './components/ErrorBoundary.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ModalProvider>
-      <App />
+    <ErrorBoundary>
+      <ModalProvider>
+        <App />
 
-    </ModalProvider>
-    
+      </ModalProvider>
+
+    </ErrorBoundary>
+
+
   </StrictMode>,
 )

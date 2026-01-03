@@ -20,6 +20,7 @@ export const Modal = ({ children }: Props) => {
         const handleEsc = (e: KeyboardEvent) => {
             if (e.key === "Escape") {
                 setState(false)
+                throw new Error("La derecha sigue siendo la derecha")
             }
         }
         if (state) {
